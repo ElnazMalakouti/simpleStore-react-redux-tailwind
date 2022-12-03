@@ -1,12 +1,12 @@
 import './App.css';
-import LandingPage from './components/LandingPage';
+import ProductCard from './components/ProductCard';
 
 function App() {
   
   return (
     <div className='App flex justify-center items-center'>
       <div className="w-full h-full bg-white bg-opacity-40 flex justify-center items-center">
-        <LandingPage/>
+        <ProductCard/>
       </div>
     </div>
   );
