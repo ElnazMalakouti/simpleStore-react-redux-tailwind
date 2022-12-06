@@ -7,5 +7,5 @@ const combinedReducers = combineReducers({
     products : ProductsReducer
 })
 
-const persistedReducers = persistReducer({key:'rootPersist',storage,whitelist:['products']},combinedReducers)
+const persistedReducers = persistReducer({key:'rootPersist',storage,whitelist:['']},combinedReducers)
 export default persistedReducers
