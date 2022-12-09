@@ -25,3 +25,11 @@ html , body , #root{
   font-family: "PlayFairRegular";
   src: url("../font/PlayfairDisplay-Regular.otf");
 }
+@font-face {
+  font-family: "AmazonBold";
+  src: url("../font/Amazon\ Ember\ Bold.ttf");
+}
+@font-face {
+  font-family: "AmazonLight";
+  src: url("../font/Amazon\ Ember\ Cd\ RC.otf");
+}

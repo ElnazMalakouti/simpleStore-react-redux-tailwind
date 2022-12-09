@@ -20,7 +20,8 @@ const ProductCard = ({
                     <img alt="" className="max-w-full max-h-full h-[250px]" src={dressImage} />
                 </div>
             </div>
-            <div className="w-full h-[40%] bg-[#051E42] rounded-tr-[6.5rem] flex flex-col pt-3 pr-3 pl-3 pb-0 text-white">
+
+            <div className="w-full h-[40%] bg-[#285E76] rounded-tr-[6.5rem] flex flex-col pt-3 pr-3 pl-3 pb-0 text-white">
                 <div>
                     <p className="font-[PlayFairRegular] text-[18px]">{dressName}</p>
                     <div className="mt-[-8px]">                        
