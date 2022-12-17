@@ -5,10 +5,22 @@ const init = {
         {
             dressId: 1,
             dressImage: "pics/ALEX-EVENING.png",
-            dressName: "ALEX EVENING",
+            dressName: "ALEX EVENING ",
             dressScore: 4.5,
             dressDescription: "Women's Tea Length Sequin Mock Dress (Petite and Regular Sizes)",
             dressSizes: ["XL", "XXL"],
+            dressColors: [
+                {
+                    id: 1,
+                    name: "dark blue",
+                    code:"#111F39"
+                },
+                {
+                    id: 2,
+                    name: "green",
+                    code:"#07832E"
+                },
+            ],
             dressIsFavorite: false,
             dressPrice: 185,
             dressAttributes: [
@@ -23,10 +35,32 @@ const init = {
         {
             dressId: 2,
             dressImage: "pics/CHICCLOTH.png",
-            dressName: "CHICCLOTH",
+            dressName: "CHICCLOTH ",
             dressScore: 4,
             dressDescription: "Women's Ruffled Sleeves V Neck Midi Formal Party Dress Sheath Pencil Cocktail Dresses",
             dressSizes: ["L"],
+            dressColors: [
+                {
+                    id: 1,
+                    name: "gray",
+                    code:"#A1A1A1"
+                },
+                {
+                    id: 2,
+                    name: "black",
+                    code:"#000000"
+                },
+                {
+                    id: 3,
+                    name: "red",
+                    code:"#EC0D0D"
+                },
+                {
+                    id: 4,
+                    name: "pink",
+                    code:"#EC0DB9"
+                },
+            ],
             dressIsFavorite: false,
             dressPrice: 19,
             dressAttributes: [
@@ -41,10 +75,27 @@ const init = {
         {
             dressId: 3,
             dressImage: "pics/DIRASS.png",
-            dressName: "DIRASS",
+            dressName: "DIRASS ",
             dressScore: 4.5,
             dressDescription: "Women's Elegant Velvet Long Sleeve Wrap V Neck Ruched Bodycon Cocktail Party Maxi Dress",
             dressSizes: ["XL"],
+            dressColors: [
+                {
+                    id: 1,
+                    name: "crimson",
+                    code:"#4A0F20"
+                },
+                {
+                    id: 2,
+                    name: "yellow",
+                    code:"#F8F405"
+                },
+                {
+                    id: 2,
+                    name: "black",
+                    code:"#000000"
+                },
+            ],
             dressIsFavorite: false,
             dressPrice: 62,
             dressAttributes: [
@@ -59,10 +110,22 @@ const init = {
         {
             dressId: 4,
             dressImage: "pics/GRACE.png",
-            dressName: "GRACE",
+            dressName: "GRACE ",
             dressScore: 5,
             dressDescription: "Women's High Neck Split Bodycon Mermaid Evening Cocktail Long Dress",
             dressSizes: ["L", "XL", "XXL"],
+            dressColors: [
+                {
+                    id: 1,
+                    name: "red",
+                    code:"#C3001E"
+                },
+                {
+                    id: 2,
+                    name: "black",
+                    code:"#000000"
+                },
+            ],
             dressIsFavorite: false,
             dressPrice: 58,
             dressAttributes: [
@@ -77,10 +140,17 @@ const init = {
         {
             dressId: 5,
             dressImage: "pics/GUBERRY.png",
-            dressName: "GUBERRY",
+            dressName: "GUBERRY ",
             dressScore: 3.5,
             dressDescription: "Womens Wrap V Neck Long Sleeve Velvet Bodycon Ruched Cocktail Party Dress",
             dressSizes: ["XL"],
+            dressColors: [
+                {
+                    id: 1,
+                    name: "dark green",
+                    code:"#0A3529"
+                },                
+            ],
             dressIsFavorite: false,
             dressPrice: 44,
             dressAttributes: [
@@ -95,10 +165,32 @@ const init = {
         {
             dressId: 6,
             dressImage: "pics/HANNAH-ZONE.png",
-            dressName: "HANNAH ZONE",
+            dressName: "HANNAH ZONE ",
             dressScore: 4.5,
             dressDescription: "Women's Vintage Ruffle Sleeve V-Neck Bodycon Evening Party Cocktail Pencil Sheath Dress",
             dressSizes: ["XXL"],
+            dressColors: [
+                {
+                    id: 1,
+                    name: "green",
+                    code:"#0B3A26"
+                },
+                {
+                    id: 2,
+                    name: "gray",
+                    code:"#A1A1A1"
+                },
+                {
+                    id: 3,
+                    name: "black",
+                    code:"#000000"
+                },
+                {
+                    id: 4,
+                    name: "red",
+                    code:"#EC0D0D"
+                },                
+            ],
             dressIsFavorite: false,
             dressPrice: 39,
             dressAttributes: [
@@ -113,10 +205,32 @@ const init = {
         {
             dressId: 7,
             dressImage: "pics/KNITEE.png",
-            dressName: "KNITEE",
+            dressName: "KNITEE ",
             dressScore: 5,
             dressDescription: "Women's One Shoulder Sleeveless Cutout Ruched Slit Midi Bodycon Casual Cocktail Party Wrap Dress",
             dressSizes: ["L"],
+            dressColors: [
+                {
+                    id: 1,
+                    name: "gray",
+                    code:"#A1A1A1"
+                },
+                {
+                    id: 2,
+                    name: "black",
+                    code:"#000000"
+                },
+                {
+                    id: 3,
+                    name: "red",
+                    code:"#EC0D0D"
+                },
+                {
+                    id: 4,
+                    name: "crimson",
+                    code:"#4A0F20"
+                },
+            ],
             dressIsFavorite: false,
             dressPrice: 40,
             dressAttributes: [
@@ -131,10 +245,17 @@ const init = {
         {
             dressId: 8,
             dressImage: "pics/KORMEI.png",
-            dressName: "KORMEI",
+            dressName: "KORMEI ",
             dressScore: 3,
             dressDescription: "Womens Short Sleeve Floral High Low V-Neck Flowy Party Long Maxi Dress",
             dressSizes: ["S", "L"],
+            dressColors: [
+                {
+                    id: 1,
+                    name: "black",
+                    code:"#000000"
+                },
+            ],
             dressIsFavorite: false,
             dressPrice: 36,
             dressAttributes: [
@@ -149,10 +270,27 @@ const init = {
         {
             dressId: 9,
             dressImage: "pics/LYANER.png",
-            dressName: "LYANER",
+            dressName: "LYANER ",
             dressScore: 3.5,
             dressDescription: "Women's Satin Ruffle One Shoulder Ruched Split Wrap Front Cocktail Midi Bodycon Dress",
             dressSizes: ["S", "XL"],
+            dressColors: [
+                {
+                    id: 1,
+                    name: "light pink",
+                    code:"#F2D9C1"
+                },    
+                {
+                    id: 2,
+                    name: "crimson",
+                    code:"#4A0F20"
+                },        
+                {
+                    id: 3,
+                    name: "green",
+                    code:"#0B3A26"
+                },
+            ],
             dressIsFavorite: false,
             dressPrice: 35,
             dressAttributes: [
@@ -167,10 +305,28 @@ const init = {
         {
             dressId: 10,
             dressImage: "pics/OTEN.png",
-            dressName: "OTEN",
+            dressName: "OTEN ",
             dressScore: 4,
             dressDescription: "Womens Deep V Neck Ruffle Sleeve Sheath Casual Cocktail.",
             dressSizes: ["XL", "XXL"],
+            dressColors: [
+                {
+                    id: 1,
+                    name: "black",
+                    code:"#000000"
+                },
+                {
+                    id: 2,
+                    name: "green",
+                    code:"#0B3A26"
+                },
+                {
+                    id: 3,
+                    name: "gray",
+                    code:"#A1A1A1"
+                },
+
+            ],
             dressIsFavorite: false,
             dressPrice: 23,
             dressAttributes: [
@@ -185,10 +341,32 @@ const init = {
         {
             dressId: 11,
             dressImage: "pics/OWIN.png",
-            dressName: "OWIN",
+            dressName: "OWIN ",
             dressScore: 4.5,
             dressDescription: "Women's 3/4 Sleeves Deep V Neck Casual Party Cocktail Dresses Waist Tie Ruffle Hem Work Wrap",
             dressSizes: ["L", "XL", "XXL"],
+            dressColors: [
+                {
+                    id: 1,
+                    name: "gray",
+                    code:"#A1A1A1"
+                },
+                {
+                    id: 2,
+                    name: "black",
+                    code:"#000000"
+                },
+                {
+                    id: 3,
+                    name: "red",
+                    code:"#EC0D0D"
+                },
+                {
+                    id: 4,
+                    name: "crimson",
+                    code:"#4A0F20"
+                },
+            ],
             dressIsFavorite: false,
             dressPrice: 25,
             dressAttributes: [
@@ -203,10 +381,17 @@ const init = {
         {
             dressId: 12,
             dressImage: "pics/VFSHOW.png",
-            dressName: "VFSHOW",
+            dressName: "VFSHOW ",
             dressScore: 4.5,
             dressDescription: "Womens Off Shoulder High Slit Formal Evening Party Bodycon Maxi Long Dress",
             dressSizes: ["S", "L", "XL"],
+            dressColors: [
+                {
+                    id: 1,
+                    name: "green",
+                    code:"#13533B"
+                },
+            ],
             dressIsFavorite: false,
             dressPrice: 59,
             dressAttributes: [
