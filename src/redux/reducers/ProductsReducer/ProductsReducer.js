@@ -4,7 +4,7 @@ const init = {
     Products: [
         {
             dressId: 1,
-            dressImage: "pics/ALEX-EVENING.png",
+            dressImage: "/pics/ALEX-EVENING.png",
             dressName: "ALEX EVENING ",
             dressScore: 4.5,
             dressDescription: "Women's Tea Length Sequin Mock Dress (Petite and Regular Sizes)",
@@ -34,7 +34,7 @@ const init = {
         },
         {
             dressId: 2,
-            dressImage: "pics/CHICCLOTH.png",
+            dressImage: "/pics/CHICCLOTH.png",
             dressName: "CHICCLOTH ",
             dressScore: 4,
             dressDescription: "Women's Ruffled Sleeves V Neck Midi Formal Party Dress Sheath Pencil Cocktail Dresses",
@@ -74,7 +74,7 @@ const init = {
         },
         {
             dressId: 3,
-            dressImage: "pics/DIRASS.png",
+            dressImage: "/pics/DIRASS.png",
             dressName: "DIRASS ",
             dressScore: 4.5,
             dressDescription: "Women's Elegant Velvet Long Sleeve Wrap V Neck Ruched Bodycon Cocktail Party Maxi Dress",
@@ -109,7 +109,7 @@ const init = {
         },
         {
             dressId: 4,
-            dressImage: "pics/GRACE.png",
+            dressImage: "/pics/GRACE.png",
             dressName: "GRACE ",
             dressScore: 5,
             dressDescription: "Women's High Neck Split Bodycon Mermaid Evening Cocktail Long Dress",
@@ -139,7 +139,7 @@ const init = {
         },
         {
             dressId: 5,
-            dressImage: "pics/GUBERRY.png",
+            dressImage: "/pics/GUBERRY.png",
             dressName: "GUBERRY ",
             dressScore: 3.5,
             dressDescription: "Womens Wrap V Neck Long Sleeve Velvet Bodycon Ruched Cocktail Party Dress",
@@ -164,7 +164,7 @@ const init = {
         },
         {
             dressId: 6,
-            dressImage: "pics/HANNAH-ZONE.png",
+            dressImage: "/pics/HANNAH-ZONE.png",
             dressName: "HANNAH ZONE ",
             dressScore: 4.5,
             dressDescription: "Women's Vintage Ruffle Sleeve V-Neck Bodycon Evening Party Cocktail Pencil Sheath Dress",
@@ -204,7 +204,7 @@ const init = {
         },
         {
             dressId: 7,
-            dressImage: "pics/KNITEE.png",
+            dressImage: "/pics/KNITEE.png",
             dressName: "KNITEE ",
             dressScore: 5,
             dressDescription: "Women's One Shoulder Sleeveless Cutout Ruched Slit Midi Bodycon Casual Cocktail Party Wrap Dress",
@@ -244,7 +244,7 @@ const init = {
         },
         {
             dressId: 8,
-            dressImage: "pics/KORMEI.png",
+            dressImage: "/pics/KORMEI.png",
             dressName: "KORMEI ",
             dressScore: 3,
             dressDescription: "Womens Short Sleeve Floral High Low V-Neck Flowy Party Long Maxi Dress",
@@ -269,7 +269,7 @@ const init = {
         },
         {
             dressId: 9,
-            dressImage: "pics/LYANER.png",
+            dressImage: "/pics/LYANER.png",
             dressName: "LYANER ",
             dressScore: 3.5,
             dressDescription: "Women's Satin Ruffle One Shoulder Ruched Split Wrap Front Cocktail Midi Bodycon Dress",
@@ -304,7 +304,7 @@ const init = {
         },
         {
             dressId: 10,
-            dressImage: "pics/OTEN.png",
+            dressImage: "/pics/OTEN.png",
             dressName: "OTEN ",
             dressScore: 4,
             dressDescription: "Womens Deep V Neck Ruffle Sleeve Sheath Casual Cocktail.",
@@ -340,7 +340,7 @@ const init = {
         },
         {
             dressId: 11,
-            dressImage: "pics/OWIN.png",
+            dressImage: "/pics/OWIN.png",
             dressName: "OWIN ",
             dressScore: 4.5,
             dressDescription: "Women's 3/4 Sleeves Deep V Neck Casual Party Cocktail Dresses Waist Tie Ruffle Hem Work Wrap",
@@ -380,7 +380,7 @@ const init = {
         },
         {
             dressId: 12,
-            dressImage: "pics/VFSHOW.png",
+            dressImage: "/pics/VFSHOW.png",
             dressName: "VFSHOW ",
             dressScore: 4.5,
             dressDescription: "Womens Off Shoulder High Slit Formal Evening Party Bodycon Maxi Long Dress",

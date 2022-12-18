@@ -1,6 +1,7 @@
 import StarRatings from "react-star-ratings"
 import "./index.css"
 
+
 const ProductPage = ({
     dressImage,
     dressName,
@@ -10,8 +11,9 @@ const ProductPage = ({
     dressColors,
     dressPrice,
     dressAttributes}) => {
+        
     return (
-        <div className="w-full h-[90%] flex flex-row ml-[1rem]">
+        <div className="w-full h-full flex flex-row ml-[1rem]">
 
             <div className="w-[25%] h-full mr-4 bg-[#EDEDED] flex justify-center items-center">
                 <img className="h-full" alt="" src={dressImage} />
@@ -38,7 +40,7 @@ const ProductPage = ({
                         <div className="flex flex-row gap-4">
                             {
                                 dressColors.map(item => {
-                                    return <button style={{backgroundColor:`${item.code}`}} className="w-[32px] h-[32px] ring-1 ring-[#D2D4D3] ring-offset-4 rounded-[50%]"></button>
+                                    return <button key={item.id} style={{backgroundColor:`${item.code}`}} className="w-[32px] h-[32px] ring-1 ring-[#D2D4D3] ring-offset-4 rounded-[50%]"></button>
                                 })
                             }
                         </div>
@@ -49,7 +51,7 @@ const ProductPage = ({
                         <select className="w-[100px] h-[33px] p-1 text-[15px] text-[#545460] border-[1px] border-solid border-[#8C8D8C] rounded-[.5rem] cursor-pointer outline-none hover:bg-[#EBEBEB]">
                             <option value="" disabled selected hidden>Select</option>
                             {dressSizes.map(item => {
-                                return <option>{item}</option>
+                                return <option key={item}>{item}</option>
                             })}                            
                         </select>
                     </div>
