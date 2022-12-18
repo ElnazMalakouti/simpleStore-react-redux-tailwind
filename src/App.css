@@ -3,21 +3,26 @@
     height: 100%;
 }
 
+.headerBorderShadow{
+  box-shadow: 0 20px 20px -5px
+  rgb(0 0 0 / 0.2), 0 8px 10px -6px rgb(0 0 0 / 0.1)
+}
+
 .products::-webkit-scrollbar{
     display: none;
 }
 
 
-.shopCart::-webkit-scrollbar {
-    width: 8px;
+.scrollBar::-webkit-scrollbar {
+    width: 10px;
   }
    
-  .shopCart::-webkit-scrollbar-thumb {
+  .scrollBar::-webkit-scrollbar-thumb {
     background: rgb(145, 145, 145);
     border-radius: 20px;
   }
   
-  .shopCart::-webkit-scrollbar-track {
+  .scrollBar::-webkit-scrollbar-track {
     background: #ddd;
     border-radius: 20px;
   }

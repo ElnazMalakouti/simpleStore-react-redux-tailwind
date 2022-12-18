@@ -1,15 +1,17 @@
+import "./index.css"
 import { BsTrash } from "react-icons/bs"
 import { IoBagCheckOutline } from "react-icons/io5"
-import {FiHeart} from "react-icons/fi"
-import {CgShoppingBag} from "react-icons/cg"
+// import {FiHeart} from "react-icons/fi"
+// import {CgShoppingBag} from "react-icons/cg"
+// import { Link } from "react-router-dom"
 
 const ShoppingCart = () => {
     return (
         <div className="w-full h-full flex flex-col gap-2">
 
-            <div className="w-full h-[6.5rem] flex flex-row justify-between">
+            {/* <div className="w-full h-[6.5rem] flex flex-row justify-between">
                 <div className="w-[20%] h-[90%] ml-[6rem] mt-2">
-                    <img className="w-auto h-full" alt="" src="pics/logo2.png"/>
+                    <Link to="/products"><button className='w-auto h-full'><img className="w-auto h-full" alt="" src="pics/logo2.png"/></button></Link>
                 </div>
 
                 <div className="h-full flex justify-center items-center text-[#035972] font-[AmazonLight] text-[22px]">
@@ -26,7 +28,8 @@ const ShoppingCart = () => {
                         <p className="text-[16px]">Shopping Cart</p>
                     </div>
                 </div>
-            </div>
+            </div> */}
+
 
             <div className="w-full h-full bg-[#EDEDED] flex flex-row p-[1rem] gap-[1rem]">
 

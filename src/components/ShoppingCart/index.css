@@ -1,0 +1,13 @@
+.shopCart::-webkit-scrollbar {
+    width: 8px;
+  }
+   
+  .shopCart::-webkit-scrollbar-thumb {
+    background: rgb(145, 145, 145);
+    border-radius: 20px;
+  }
+  
+  .shopCart::-webkit-scrollbar-track {
+    background: #ddd;
+    border-radius: 20px;
+  }

@@ -1,5 +1,6 @@
 import "./index.css"
 import Button from "../Button"
+import { Link } from "react-router-dom"
 
 const LandingPage = () => {
     return (
@@ -15,7 +16,9 @@ const LandingPage = () => {
                 </div>
 
                 <div>
-                    <Button>SHOP NOW</Button>
+                    <Link to="/products">
+                        <Button>SHOP NOW</Button>
+                    </Link>
                 </div>
 
             </div>
