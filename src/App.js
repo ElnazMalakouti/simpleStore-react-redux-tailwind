@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 import ShoppingCart from './components/ShoppingCart';
 import LandingPage from "./components/LandingPage"
-import DressPage, {dressPage , loader } from './layout/DressPage';
+import DressPage , { loader } from './layout/DressPage';
 import Layout from './layout';
 import ProductsList from './components/ProductsList';
 

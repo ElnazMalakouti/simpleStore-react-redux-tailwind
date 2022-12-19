@@ -11,6 +11,7 @@ const ProductsList = () => {
               productList && productList.map(item => {
                 return <ProductCard
                   key={item.dressId}
+                  dressId={item.dressId}
                   dressName={item.dressName}
                   dressDescription={item.dressDescription}
                   dressImage={item.dressImage}
