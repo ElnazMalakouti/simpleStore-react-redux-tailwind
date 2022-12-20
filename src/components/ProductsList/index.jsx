@@ -1,4 +1,3 @@
-// import { useEffect } from "react"
 import { useEffect } from "react"
 import { useState } from "react"
 import { useSelector } from "react-redux"
@@ -7,34 +6,36 @@ import ProductCard from "../ProductCard"
 
 const ProductsList = () => {
 
+  const productList = useSelector(state => state.products.Products)
+
   const [filteredSizeDresses, setFilteredSizeDresses] = useState([])
 
   const [sizeRadioValue, setSizeRadioValue] = useState("All")
+  const [priceRadioValue, setPriceRadioValue] = useState("Lowest")
   
 
-  const filterSizes = (size) => {
-    if(size === 'All'){
-      setFilteredSizeDresses(productList)
-    }else{
-      const temp = productList.filter(item => {
-        if (item.dressSizes.includes(size, 0)) {
-          return item
-        }
-      })
-      setFilteredSizeDresses(temp)
+  const filterAndSort = () => {
+    let temp = [...productList]
+    if(sizeRadioValue !== 'All'){
+      temp = temp.filter(item => item.dressSizes.includes(sizeRadioValue , 0))
+    }          
+    if(priceRadioValue === 'Lowest'){
+      temp = temp.sort((a,b) => a.dressPrice - b.dressPrice)
+    }else if(priceRadioValue === 'Highest'){
+      temp = temp.sort((a,b) => b.dressPrice - a.dressPrice)
     }
+    setFilteredSizeDresses(temp)
   }
 
   useEffect(()=>{
-    filterSizes(sizeRadioValue)
-  },[sizeRadioValue])
+    filterAndSort()
+  },[sizeRadioValue,priceRadioValue])
 
-
-  const productList = useSelector(state => state.products.Products)
+  
 
   return (
     <div className=" scrollBar w-full h-full flex flex-row overflow-auto">
-
+      {console.log(filteredSizeDresses)}
       
       <div className="w-[15%] h-full gap-2 p-1 pl-2 pr-2 bg-[#EDEDED] border-r-2 fixed left-0 flex flex-col font-[AmazonLight]">
 
@@ -64,13 +65,13 @@ const ProductsList = () => {
         <div className="m-[1px] p-2 bg-white">
           <p>Sort Price</p>
           <hr />
-          <div className="flex flex-col gap-1 text-[#545460]">
+          <div className="flex flex-col gap-1 text-[#545460]" onChange={(e) => setPriceRadioValue(e.target.value)}>
             <label className="flex flex-row gap-1 items-center">              
-              <input type={'radio'} value={'Lowest'} name={'size'} />
+              <input type={'radio'} value={'Lowest'} name={'price'} checked={priceRadioValue === 'Lowest'}/>
               <p>Lowest price</p>
             </label>
             <label className="flex flex-row gap-1 items-center">              
-              <input type={'radio'} value={'Highest'} name={'size'} />
+              <input type={'radio'} value={'Highest'} name={'price'} checked={priceRadioValue === 'Highest'}/>
               <p>Highest price</p>
             </label>
           </div>
