@@ -5,7 +5,7 @@ const init = {
         {
             dressId: 1,
             dressImage: "/pics/ALEX-EVENING.png",
-            dressName: "ALEX EVENING ",
+            dressName: "ALEX-EVENING",
             dressScore: 4.5,
             dressDescription: "Women's Tea Length Sequin Mock Dress (Petite and Regular Sizes)",
             dressSizes: ["XL", "XXL"],
@@ -25,9 +25,7 @@ const init = {
             dressPrice: 185,
             dressAttributes: [
                 "Top Part:95% POLYESTER+5% SPANDEX;Bottom Part: 90% POLYESTER+10% SPANDEX",
-                "Hand Wash Only",
-                "Zipper closure",
-                "Garments in different colors/patterns may use different materials,",
+                "Hand Wash Only",                                
                 "Notch V Neckline, Sleeveless, Patchwork Design, Two handy pockets.",
                 "Hand Wash in cold water, Machine Wash gently, hang or line dry. [Do not tumble dry]"
             ]
@@ -35,7 +33,7 @@ const init = {
         {
             dressId: 2,
             dressImage: "/pics/CHICCLOTH.png",
-            dressName: "CHICCLOTH ",
+            dressName: "CHICCLOTH",
             dressScore: 4,
             dressDescription: "Women's Ruffled Sleeves V Neck Midi Formal Party Dress Sheath Pencil Cocktail Dresses",
             dressSizes: ["L"],
@@ -66,8 +64,6 @@ const init = {
             dressAttributes: [
                 "65% Rayon, 35% Polyester",
                 "Machine Wash",
-                "Pull On closure",
-                "If you are in between size,please size up.",
                 "Design: Eyelashes lace,Slimming Sheath Style, Full Lace Short Midi Dress, Full Zip Back",
                 "Size:S(US 2-4) / M(US 6-8) / L(US 10-12) / XL(US 14-16)"
             ]
@@ -75,7 +71,7 @@ const init = {
         {
             dressId: 3,
             dressImage: "/pics/DIRASS.png",
-            dressName: "DIRASS ",
+            dressName: "DIRASS",
             dressScore: 4.5,
             dressDescription: "Women's Elegant Velvet Long Sleeve Wrap V Neck Ruched Bodycon Cocktail Party Maxi Dress",
             dressSizes: ["XL"],
@@ -101,8 +97,6 @@ const init = {
             dressAttributes: [
                 "95% Polyester, 5% Spandex",
                 "Tie closure",
-                "Machine Wash",
-                "95%Polyester 5%Spandex, super softcomfy and stretchy, keeps you fitted in all the right places",
                 "Elegant velvet, wrap v neck, long sleeve, ruch bodycon dress that hide belly fat, maxi dress.",
                 "This dress can well meet your fashion needs in fall and winter, styling with high heels."
             ]
@@ -110,7 +104,7 @@ const init = {
         {
             dressId: 4,
             dressImage: "/pics/GRACE.png",
-            dressName: "GRACE ",
+            dressName: "GRACE",
             dressScore: 5,
             dressDescription: "Women's High Neck Split Bodycon Mermaid Evening Cocktail Long Dress",
             dressSizes: ["L", "XL", "XXL"],
@@ -131,8 +125,6 @@ const init = {
             dressAttributes: [
                 "Imported",
                 "Zipper closure",
-                "Machine washable with cold water in a delicate cycle.",
-                "This summer slimming mini dress is made of 95% Polyamide and 5% Spandex.",
                 "Solid color, cottage core dress, mesh long lantern sleeves, elastic cuffs and shoulders.",
                 "This elegant party dress is very form fitting, it will hug all of your curves."
             ]
@@ -140,7 +132,7 @@ const init = {
         {
             dressId: 5,
             dressImage: "/pics/GUBERRY.png",
-            dressName: "GUBERRY ",
+            dressName: "GUBERRY",
             dressScore: 3.5,
             dressDescription: "Womens Wrap V Neck Long Sleeve Velvet Bodycon Ruched Cocktail Party Dress",
             dressSizes: ["XL"],
@@ -156,8 +148,6 @@ const init = {
             dressAttributes: [
                 "65% Rayon, 35% Polyester",
                 "Machine Wash",
-                "Pull On closure",
-                "If you are in between size,please size up.",
                 "Design: Eyelashes lace,Slimming Sheath Style, Full Lace Short Midi Dress, Full Zip Back",
                 "Size:S(US 2-4) / M(US 6-8) / L(US 10-12) / XL(US 14-16)"
             ]
@@ -165,7 +155,7 @@ const init = {
         {
             dressId: 6,
             dressImage: "/pics/HANNAH-ZONE.png",
-            dressName: "HANNAH ZONE ",
+            dressName: "HANNAH-ZONE",
             dressScore: 4.5,
             dressDescription: "Women's Vintage Ruffle Sleeve V-Neck Bodycon Evening Party Cocktail Pencil Sheath Dress",
             dressSizes: ["XXL"],
@@ -197,15 +187,13 @@ const init = {
                 "Imported",
                 "Zipper closure",
                 "Machine washable with cold water in a delicate cycle.",
-                "This summer slimming mini dress is made of 95% Polyamide and 5% Spandex.",
-                "Solid color, cottage core dress, mesh long lantern sleeves, elastic cuffs and shoulders.",
                 "This elegant party dress is very form fitting, it will hug all of your curves."
             ]
         },
         {
             dressId: 7,
             dressImage: "/pics/KNITEE.png",
-            dressName: "KNITEE ",
+            dressName: "KNITEE",
             dressScore: 5,
             dressDescription: "Women's One Shoulder Sleeveless Cutout Ruched Slit Midi Bodycon Casual Cocktail Party Wrap Dress",
             dressSizes: ["L"],
@@ -236,8 +224,6 @@ const init = {
             dressAttributes: [
                 "If you are in between size, please size up",
                 "Imported",
-                "lining lining",
-                "Polyester, LACE Fabric IS NOT Elasticity!!! but is soft.",
                 "lovely eyelash lace, V-back with hidden zipper, Hit the waists perfectly.",
                 "Round neck, fluttering short sleeve, or sleeveless, lined, above the knee."
             ]
@@ -245,7 +231,7 @@ const init = {
         {
             dressId: 8,
             dressImage: "/pics/KORMEI.png",
-            dressName: "KORMEI ",
+            dressName: "KORMEI",
             dressScore: 3,
             dressDescription: "Womens Short Sleeve Floral High Low V-Neck Flowy Party Long Maxi Dress",
             dressSizes: ["S", "L"],
@@ -261,8 +247,6 @@ const init = {
             dressAttributes: [
                 "65% Rayon, 35% Polyester",
                 "Machine Wash",
-                "Pull On closure",
-                "If you are in between size,please size up.",
                 "Design: Eyelashes lace,Slimming Sheath Style, Full Lace Short Midi Dress, Full Zip Back",
                 "Size:S(US 2-4) / M(US 6-8) / L(US 10-12) / XL(US 14-16)"
             ]
@@ -270,7 +254,7 @@ const init = {
         {
             dressId: 9,
             dressImage: "/pics/LYANER.png",
-            dressName: "LYANER ",
+            dressName: "LYANER",
             dressScore: 3.5,
             dressDescription: "Women's Satin Ruffle One Shoulder Ruched Split Wrap Front Cocktail Midi Bodycon Dress",
             dressSizes: ["S", "XL"],
@@ -296,8 +280,6 @@ const init = {
             dressAttributes: [
                 "Imported",
                 "Zipper closure",
-                "Machine washable with cold water in a delicate cycle.",
-                "This summer slimming mini dress is made of 95% Polyamide and 5% Spandex.",
                 "Solid color, cottage core dress, mesh long lantern sleeves, elastic cuffs and shoulders.",
                 "This elegant party dress is very form fitting, it will hug all of your curves."
             ]
@@ -305,7 +287,7 @@ const init = {
         {
             dressId: 10,
             dressImage: "/pics/OTEN.png",
-            dressName: "OTEN ",
+            dressName: "OTEN",
             dressScore: 4,
             dressDescription: "Womens Deep V Neck Ruffle Sleeve Sheath Casual Cocktail.",
             dressSizes: ["XL", "XXL"],
@@ -332,8 +314,6 @@ const init = {
             dressAttributes: [
                 "If you are in between size, please size up",
                 "Imported",
-                "lining lining",
-                "Polyester, LACE Fabric IS NOT Elasticity!!! but is soft.",
                 "lovely eyelash lace, V-back with hidden zipper, Hit the waists perfectly.",
                 "Round neck, fluttering short sleeve, or sleeveless, lined, above the knee, Mid-thigh."
             ]
@@ -341,7 +321,7 @@ const init = {
         {
             dressId: 11,
             dressImage: "/pics/OWIN.png",
-            dressName: "OWIN ",
+            dressName: "OWIN",
             dressScore: 4.5,
             dressDescription: "Women's 3/4 Sleeves Deep V Neck Casual Party Cocktail Dresses Waist Tie Ruffle Hem Work Wrap",
             dressSizes: ["L", "XL", "XXL"],
@@ -372,8 +352,6 @@ const init = {
             dressAttributes: [
                 "65% Rayon, 35% Polyester",
                 "Machine Wash",
-                "Pull On closure",
-                "If you are in between size,please size up.",
                 "Design: Eyelashes lace,Slimming Sheath Style, Full Lace Short Midi Dress, Full Zip Back",
                 "Size:S(US 2-4) / M(US 6-8) / L(US 10-12) / XL(US 14-16)"
             ]
@@ -381,7 +359,7 @@ const init = {
         {
             dressId: 12,
             dressImage: "/pics/VFSHOW.png",
-            dressName: "VFSHOW ",
+            dressName: "VFSHOW",
             dressScore: 4.5,
             dressDescription: "Womens Off Shoulder High Slit Formal Evening Party Bodycon Maxi Long Dress",
             dressSizes: ["S", "L", "XL"],
@@ -397,8 +375,6 @@ const init = {
             dressAttributes: [
                 "If you are in between size, please size up",
                 "Imported",
-                "lining lining",
-                "Polyester, LACE Fabric IS NOT Elasticity!!! but is soft.",
                 "lovely eyelash lace, V-back with hidden zipper, Hit the waists perfectly",
                 "Round neck, fluttering short sleeve, or sleeveless, lined, above the knee, Mid-thigh."
             ]
@@ -410,12 +386,7 @@ const init = {
 const ProductsReducer = createSlice({
     name: "ProductsReducer",
     initialState: init,
-    reducers: {
-        add: (state, action) => {
-            console.log("action set")
-        }
-    }
 })
 
-export const { add } = ProductsReducer.actions
+
 export default ProductsReducer.reducer

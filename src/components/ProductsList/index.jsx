@@ -11,6 +11,7 @@ const ProductsList = () => {
   const [filteredSizeDresses, setFilteredSizeDresses] = useState([])
 
   const [sizeRadioValue, setSizeRadioValue] = useState("All")
+  
   const [priceRadioValue, setPriceRadioValue] = useState("Lowest")
   
 
@@ -35,7 +36,6 @@ const ProductsList = () => {
 
   return (
     <div className=" scrollBar w-full h-full flex flex-row overflow-auto">
-      {console.log(filteredSizeDresses)}
       
       <div className="w-[15%] h-full gap-2 p-1 pl-2 pr-2 bg-[#EDEDED] border-r-2 fixed left-0 flex flex-col font-[AmazonLight]">
 
