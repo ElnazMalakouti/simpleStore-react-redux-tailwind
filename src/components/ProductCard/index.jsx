@@ -1,8 +1,12 @@
 import "./index.css"
+import { useSelector } from "react-redux"
+import { useDispatch } from "react-redux"
+import { changeFavoriteMode } from "../../redux/reducers/favoritesReducer/favoritesReducer"
 import StarRatings from "react-star-ratings"
-
 import { BsFillHeartFill } from "react-icons/bs"
 import { Link } from "react-router-dom"
+import { useState } from "react"
+import { useEffect } from "react"
 
 const ProductCard = ({
     dressId,
@@ -14,6 +18,18 @@ const ProductCard = ({
     dressIsFavorite,
     dressPrice
 }) => {
+
+    const dispatch = useDispatch()
+
+    const favorites = useSelector((state) => state.favorites.favoriteDressId)
+    const products = useSelector((state) => state.products.Products)
+
+    const [favoriteState , setFavoriteState] = useState()
+
+    useEffect(()=>{
+        setFavoriteState(favorites.find(item => item === dressId))
+    },[favorites])
+
     return (
         
             <div className="w-[300px] h-[415px] bg-[#EDEDED] rounded-2xl flex flex-col Bshadow">
@@ -46,7 +62,10 @@ const ProductCard = ({
                     <div className="flex flex-row justify-between items-center mt-[1rem] font-bold">
                         <p className="text-[21px] "><span className="mr-1">$</span>{dressPrice}</p>
                         <button className="w-[150px] h-[40px] bg-white text-[#051E42] rounded-[2.5rem] ring-1 ring-white ring-offset-2 ring-offset-[#051E42] hover:bg-[#B4CDD5]">See more info</button>
-                        <button className="w-[40px] h-[40px] text-[18px] rounded-[50%] bg-white text-[#051E42] flex justify-center items-center ring-1 ring-white ring-offset-2 ring-offset-[#051E42] hover:text-red-600"><><BsFillHeartFill /></></button>
+                        <button onClick={() => {
+                            
+                            dispatch(changeFavoriteMode(dressId))                            
+                        }} className={`w-[40px] h-[40px] text-[18px] rounded-[50%] bg-white text-[#051E42] flex justify-center items-center ring-1 ring-white ring-offset-2 ring-offset-[#051E42] ${favoriteState ? "text-red-600" : ""}`}><><BsFillHeartFill /></></button>
                     </div>
                 </div>
 

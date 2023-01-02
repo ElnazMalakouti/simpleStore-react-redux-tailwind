@@ -7,15 +7,8 @@ import { useEffect, useState } from "react"
 
 const Header = () => {
 
-    const orderlist = useSelector((state) => state.order.orderList)
+    const orderlength = (useSelector((state) => state.order.orderList)).length
 
-    const [orderLength , setOrderLength] = useState(0)
-
-    useEffect(()=>{
-      if(orderlist.length > 0){
-        setOrderLength(orderlist.length)
-      }
-    },[orderlist])
 
     return(
         <div className="headerBorderShadow w-full h-[7rem] bg-white flex flex-row justify-between border-b-2 pb-2">
@@ -34,7 +27,7 @@ const Header = () => {
             </div>
             <div className="flex flex-col justify-center items-center text-[#035972] relative">
               <Link to="/shoppingCart"><button className="text-[26px]"><><CgShoppingBag /></></button></Link>              
-              <span className={`w-[1rem] h-[1rem] bg-red-500 text-white rounded-[50%] text-[10px] flex justify-center items-center absolute left-[50%] top-[30%] ${orderLength > 0 ? "block" : "hidden"}`}>{orderLength}</span>
+              <span className={`w-[1rem] h-[1rem] bg-red-500 text-white rounded-[50%] text-[10px] flex justify-center items-center absolute left-[50%] top-[30%] ${orderlength > 0 ? "block" : "hidden"}`}>{orderlength}</span>
               <p className="text-[16px]">Shopping Cart</p>
             </div>
           </div>

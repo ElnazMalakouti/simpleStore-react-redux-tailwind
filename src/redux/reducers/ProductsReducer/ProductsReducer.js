@@ -21,7 +21,7 @@ const init = {
                     code:"#07832E"
                 },
             ],
-            dressIsFavorite: false,
+            
             dressPrice: 185,
             dressAttributes: [
                 "Top Part:95% POLYESTER+5% SPANDEX;Bottom Part: 90% POLYESTER+10% SPANDEX",
@@ -59,7 +59,7 @@ const init = {
                     code:"#EC0DB9"
                 },
             ],
-            dressIsFavorite: false,
+            
             dressPrice: 19,
             dressAttributes: [
                 "65% Rayon, 35% Polyester",
@@ -92,7 +92,7 @@ const init = {
                     code:"#000000"
                 },
             ],
-            dressIsFavorite: false,
+            
             dressPrice: 62,
             dressAttributes: [
                 "95% Polyester, 5% Spandex",
@@ -120,7 +120,7 @@ const init = {
                     code:"#000000"
                 },
             ],
-            dressIsFavorite: false,
+            
             dressPrice: 58,
             dressAttributes: [
                 "Imported",
@@ -143,7 +143,7 @@ const init = {
                     code:"#0A3529"
                 },                
             ],
-            dressIsFavorite: false,
+            
             dressPrice: 44,
             dressAttributes: [
                 "65% Rayon, 35% Polyester",
@@ -181,7 +181,7 @@ const init = {
                     code:"#EC0D0D"
                 },                
             ],
-            dressIsFavorite: false,
+            
             dressPrice: 39,
             dressAttributes: [
                 "Imported",
@@ -219,7 +219,7 @@ const init = {
                     code:"#4A0F20"
                 },
             ],
-            dressIsFavorite: false,
+            
             dressPrice: 40,
             dressAttributes: [
                 "If you are in between size, please size up",
@@ -242,7 +242,7 @@ const init = {
                     code:"#000000"
                 },
             ],
-            dressIsFavorite: false,
+            
             dressPrice: 36,
             dressAttributes: [
                 "65% Rayon, 35% Polyester",
@@ -275,7 +275,7 @@ const init = {
                     code:"#0B3A26"
                 },
             ],
-            dressIsFavorite: false,
+            
             dressPrice: 35,
             dressAttributes: [
                 "Imported",
@@ -309,7 +309,7 @@ const init = {
                 },
 
             ],
-            dressIsFavorite: false,
+            
             dressPrice: 23,
             dressAttributes: [
                 "If you are in between size, please size up",
@@ -347,7 +347,7 @@ const init = {
                     code:"#4A0F20"
                 },
             ],
-            dressIsFavorite: false,
+            
             dressPrice: 25,
             dressAttributes: [
                 "65% Rayon, 35% Polyester",
@@ -370,7 +370,7 @@ const init = {
                     code:"#13533B"
                 },
             ],
-            dressIsFavorite: false,
+            
             dressPrice: 59,
             dressAttributes: [
                 "If you are in between size, please size up",
