@@ -5,6 +5,11 @@ import { useDispatch } from "react-redux"
 import { useSelector } from "react-redux"
 import { useState } from "react"
 import { useEffect } from "react"
+import {FaPlus} from "react-icons/fa"
+import {FaMinus} from "react-icons/fa"
+import { addDressOrder } from "../../redux/reducers/orderReducer/orderReducer"
+import { removeDressOrder } from "../../redux/reducers/orderReducer/orderReducer"
+import { subDressOrder } from "../../redux/reducers/orderReducer/orderReducer"
 
 const ShoppingCart = () => {
 
@@ -19,8 +24,7 @@ const ShoppingCart = () => {
         setTotalPrice(
             orderlist.reduce((sum, current) => {
                 const temp = products.find(item => item.dressId === current.dressId)
-                if (temp) {
-                    console.log('temp')
+                if (temp) {                    
                     const totalPrice = temp.dressPrice * current.count
                     return sum + totalPrice
                 }
@@ -36,11 +40,17 @@ const ShoppingCart = () => {
 
                 <div className="w-full max-h-[76vh] flex flex-col bg-white rounded-[1rem] p-[1.5rem]">
                     <p className="font-[AmazonLight] text-[30px] mb-1">Your Shopping Cart</p>
+                    <hr />
 
+                    
+                    {/* <div className="w-full h-full flex justify-center items-center text-black text-[30px] font-[AmazonBold]">
+                        <p>your shopping cart is empty!</p>
+                    </div> */}
+
+                    {/* show orderd products */}
                     <div className="shopCart w-full overflow-auto">
                         <div className="w-full  bg-white flex flex-col">
-                            <hr />
-
+                            
                             {
                                 orderlist && orderlist.map(item => {
                                     const temp = products.find(dress => dress.dressId === item.dressId)
@@ -62,12 +72,16 @@ const ShoppingCart = () => {
                                                         <p><span className="text-[16px] font-bold">Size: </span> <span className="font-[Amazon] text-[15px]">{item.size}</span></p>
                                                         <div className="flex flex-row gap-1">
                                                             <p className="text-[17px] font-bold">Qty:</p>
-                                                            <select className="w-[45px] h-[30px] p-1 text-[15px] text-[#545460] border-[1px] border-solid border-[#8C8D8C] rounded-[.5rem] cursor-pointer outline-none hover:bg-[#EBEBEB]">
-                                                                <option>1</option>
-                                                                <option>2</option>
-                                                                <option>3</option>
-                                                                <option>4</option>
-                                                            </select>
+                                                            <div className="flex flex-row justify-center items-center gap-2">
+                                                                <button disabled={item.count === 1} onClick={()=> dispatch(subDressOrder(item.dressId))} className="w-[1.5rem] h-[1.5rem] rounded-tl-[.25rem] rounded-bl-[.25rem] bg-[#035972] text-[#EDEDED] text-[12px] flex justify-center items-center disabled:bg-[#EDEDED] disabled:text-[#545460]"><><FaMinus/></></button>
+                                                                <span>{item.count}</span>
+                                                                <button onClick={()=> dispatch(addDressOrder({
+                                                                    dressId : item.dressId ,
+                                                                    color : item.color,
+                                                                    size : item.size ,
+                                                                    count : item.count
+                                                                    }))} className="w-[1.5rem] h-[1.5rem] rounded-tr-[.25rem] rounded-br-[.25rem] bg-[#035972] text-[#EDEDED] text-[12px] flex justify-center items-center"><><FaPlus/></></button>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -75,7 +89,7 @@ const ShoppingCart = () => {
 
                                                 <div className="w-full flex flex-row justify-between mt-[1rem]">
                                                     <p className="text-[24px] text-red-500">$<span>{temp.dressPrice}</span></p>
-                                                    <button className="text-[15px] text-[#A1A1A1] flex justify-center items-center gap-1"><><BsTrash /></>Remove</button>
+                                                    <button onClick={() => dispatch(removeDressOrder(item.dressId))} className="text-[15px] text-[#A1A1A1] flex justify-center items-center gap-1"><><BsTrash /></>Remove</button>
                                                 </div>
 
                                             </div>
@@ -94,6 +108,8 @@ const ShoppingCart = () => {
 
                 </div>
 
+
+                {/* calculating orders box */}
                 <div className="w-[440px] h-[265px] bg-white rounded-[1rem] flex flex-col p-[1.5rem] gap-[.8rem] font-[AmazonLight]">
 
                     <div className="w-full flex flex-col gap-[.8rem] pl-[.5rem] pr-[.5rem] text-[18px]">
@@ -110,12 +126,12 @@ const ShoppingCart = () => {
                             <p>$<span>{(9 * totalPrice) / 100}</span></p>
                         </div>
                     </div>
-                    {console.log(orderlist)}
+                    
                     <hr />
 
                     <div className="w-full flex flex-rou justify-between items-center pl-[.5rem] pr-[.5rem] text-[20px] font-bold">
                         <p>Total:</p>
-                        <p className="text-red-500">$<span>{((totalPrice + ((9 * totalPrice) / 100)) + 14) > 0 ? ((totalPrice + ((9 * totalPrice) / 100)) + 14) : 0}</span></p>
+                        <p className="text-red-500">$<span>{((totalPrice + ((9 * totalPrice) / 100))) > 0 ? ((totalPrice + ((9 * totalPrice) / 100)) + 14) : 0}</span></p>
                     </div>
 
                     <div className="w-full flex justify-center items-center ">

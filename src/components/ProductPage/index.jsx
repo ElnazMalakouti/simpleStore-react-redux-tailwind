@@ -1,8 +1,12 @@
 import StarRatings from "react-star-ratings"
 import "./index.css"
+import { useDispatch } from "react-redux"
+import { addDressOrder } from "../../redux/reducers/orderReducer/orderReducer"
+import { useState } from "react"
 
 
 const ProductPage = ({
+    dressId,
     dressImage,
     dressName,
     dressScore,
@@ -11,6 +15,12 @@ const ProductPage = ({
     dressColors,
     dressPrice,
     dressAttributes}) => {
+
+        const dispatch = useDispatch()
+
+        const [selectedColor , setSelectedColor] = useState('')
+        const [selectedSize , setSelectedSize] = useState('')
+        const [selectedCount , setSelectedCount] = useState(1)
         
     return (
         <div className="w-full h-full flex flex-row ml-[1rem]">
@@ -21,7 +31,7 @@ const ProductPage = ({
 
             <div className="w-[60%] h-full ml-[1rem] text-[24px] flex flex-col gap-2">
                 <p className="text-[#035972] font-[AmazonBold]">{dressName}{dressDescription}</p>
-                <div className="mt-[-8px]">
+                <div className="mt-[-20px]">
                     <StarRatings
                         rating={dressScore}
                         starDimension="20px"
@@ -35,34 +45,34 @@ const ProductPage = ({
                 <div className="font-[AmazonLight] tracking-wide">
                     <p className="text-[17px] font-bold text-[#78807C]">Price: <span className="text-[22px] text-red-600"><span>$</span><span>{dressPrice}</span></span></p>
 
-                    <div className="flex flex-row items-center gap-2 mt-[1rem]">
+                    <div className="flex flex-row items-center gap-2 mt-[.5rem]">
                         <p className="text-[17px] font-bold text-[#78807C]">Color:</p>
-                        <div className="flex flex-row gap-4">
+                        <div className="flex flex-row gap-4" onChange={(e) => setSelectedColor(e.target.value)}>
                             {
                                 dressColors.map(item => {
-                                    return <button key={item.id} style={{backgroundColor:`${item.code}`}} className="w-[32px] h-[32px] ring-1 ring-[#D2D4D3] ring-offset-4 rounded-[50%]"></button>
+                                    return <input type="radio" value={item.name} checked={selectedColor === item.name} name="dressColor" key={item.id} style={{backgroundColor:`${item.code}`}} className="customRadio w-[32px] h-[32px] ring-1 ring-[#D2D4D3] ring-offset-2 rounded-[50%] cursor-pointer checked:ring-4 checked:ring-[#007ACC]"/>
                                 })
                             }
                         </div>
                     </div>
 
-                    <div className="flex flex-row items-center gap-2 mt-[1.5rem]">
+                    <div className="flex flex-row items-center gap-2 mt-[1rem]">
                         <p className="text-[17px] font-bold text-[#78807C]">Size:</p>
-                        <select className="w-[100px] h-[33px] p-1 text-[15px] text-[#545460] border-[1px] border-solid border-[#8C8D8C] rounded-[.5rem] cursor-pointer outline-none hover:bg-[#EBEBEB]">
+                        <select onChange={(e) => setSelectedSize(e.target.value)} className="w-[100px] h-[33px] p-1 text-[15px] text-[#545460] border-[1px] border-solid border-[#8C8D8C] rounded-[.5rem] cursor-pointer outline-none hover:bg-[#EBEBEB]">
                             <option value="" disabled selected hidden>Select</option>
                             {dressSizes.map(item => {
-                                return <option key={item}>{item}</option>
+                                return <option value={item} checked={selectedSize === item} key={item}>{item}</option>
                             })}                            
                         </select>
                     </div>
 
                     <div className="flex flex-row items-center gap-2 mt-[1rem]">
                         <p className="text-[17px] font-bold text-[#78807C]">Qty:</p>
-                        <select className="w-[40px] h-[30px] p-1 text-[16px] text-[#545460] border-[1px] border-solid border-[#8C8D8C] rounded-[.5rem] cursor-pointer outline-none hover:bg-[#EBEBEB]">                            
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
+                        <select onChange={(e) => setSelectedCount(e.target.value)} className="w-[40px] h-[30px] p-1 text-[16px] text-[#545460] border-[1px] border-solid border-[#8C8D8C] rounded-[.5rem] cursor-pointer outline-none hover:bg-[#EBEBEB]">                            
+                            <option value={1} onClick={selectedCount === 1}>1</option>
+                            <option value={2} onClick={selectedCount === 2}>2</option>
+                            <option value={3} onClick={selectedCount === 3}>3</option>
+                            <option value={4} onClick={selectedCount === 4}>4</option>
                         </select>
                     </div>
 
@@ -71,15 +81,14 @@ const ProductPage = ({
                         {dressAttributes.map(item => {
                             return <li>{item}</li>
                         })}
-                        {/* <li>65% Rayon, 35% Polyester</li>
-                        <li>Machine Wash</li>
-                        <li>Pull On closur</li>
-                        <li>65% Rayon, 35% Polyester</li>
-                        <li>Machine Wash</li>
-                        <li>Pull On closur</li> */}
                     </ul>
 
-                    <button className="w-[200px] h-[33px] mt-[1rem] text-[20px] text-white font-[AmazonLight] bg-[#285E76] rounded-[1rem]">Add to cart</button>
+                    <button className="w-[200px] h-[38px] mt-[1rem] text-[20px] text-white font-[AmazonLight] bg-[#285E76] rounded-[1rem]" onClick={()=> dispatch(addDressOrder({
+                        dressId : dressId ,
+                        color : selectedColor ,
+                        size : selectedSize ,
+                        count : selectedCount ,
+                    }))}>Add to cart</button>
 
                 </div>
             </div>

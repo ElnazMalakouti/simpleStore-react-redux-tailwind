@@ -1,19 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const init = {
-    orderList : [     
-        {
-            dressId : 1 ,
-            color : 'Blue' , 
-            size : 'Large' ,
-            count : 1 , 
-        },
-        {
-            dressId : 5 ,
-            color : 'Red' , 
-            size : 'X-Large' ,
-            count : 2 , 
-        }    
+    orderList : [       
     ]
 }
 
@@ -22,18 +10,24 @@ const orderReducer = createSlice({
     initialState : init , 
     reducers : {
         addDressOrder : (state,action) => {
-            const temp = state.orderList.find(item => item.dressId === action.payload)
-
+            const temp = state.orderList.find(item => {
+                if(item.dressId === action.payload.dressId && item.color === action.payload.color && item.size === action.payload.size && item.count === action.payload.count){
+                    return item
+                }                
+            })
+            
             if(temp){
-                temp.count = temp.count + 1
+                temp.count = +temp.count + 1
             }else{
                 state.orderList.push({
-                    dressId : action.payload,
-                    count : 1
+                    dressId : action.payload.dressId,
+                    color : action.payload.color ,
+                    size : action.payload.size ,
+                    count : action.payload.count
                 })
             }
         },
-        removeDressOrder : (state,action) => {
+        subDressOrder : (state,action) => {
             const temp = state.orderList.find(item => item.dressId === action.payload)
 
             if(temp){
@@ -43,12 +37,16 @@ const orderReducer = createSlice({
                     temp.count = temp.count - 1
                 }
             }
+        } , 
+        removeDressOrder : (state,action) => {
+            // const temp = state.orderList.find(item => item.dressId === action.payload)             
+            state.orderList = state.orderList.filter(item => item.dressId !== action.payload)                                      
         },
         submitOrder : (state,action) => {
             state.orderList = []
         }
-    }
+    }    
 })
 
-export const {addDressOrder,removeDressOrder,submitOrder} = orderReducer.actions
+export const {addDressOrder,removeDressOrder,subDressOrder,submitOrder} = orderReducer.actions
 export default orderReducer.reducer

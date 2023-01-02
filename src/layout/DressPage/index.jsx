@@ -22,6 +22,7 @@ const DressPage = () => {
             {
                 dressData && 
                 <ProductPage
+                dressId={dressData.dressId}
                 dressImage={dressData.dressImage}
                 dressName={dressData.dressName}
                 dressScore={dressData.dressScore}
@@ -31,7 +32,7 @@ const DressPage = () => {
                 dressPrice={dressData.dressPrice}
                 dressAttributes={dressData.dressAttributes}
                 />
-            }            
+            }                      
         </div>
     )
 }
