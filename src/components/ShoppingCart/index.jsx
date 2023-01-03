@@ -80,7 +80,7 @@ const ShoppingCart = () => {
                                                                     color : item.color,
                                                                     size : item.size ,
                                                                     count : item.count
-                                                                    }))} className="w-[1.5rem] h-[1.5rem] rounded-tr-[.25rem] rounded-br-[.25rem] bg-[#035972] text-[#EDEDED] text-[12px] flex justify-center items-center"><><FaPlus/></></button>
+                                                                    }))} disabled={item.count === 4} className="w-[1.5rem] h-[1.5rem] rounded-tr-[.25rem] rounded-br-[.25rem] bg-[#035972] text-[#EDEDED] text-[12px] flex justify-center items-center disabled:bg-[#EDEDED] disabled:text-[#545460]"><><FaPlus/></></button>
                                                             </div>
                                                         </div>
                                                     </div>

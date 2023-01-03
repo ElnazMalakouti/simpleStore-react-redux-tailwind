@@ -9,6 +9,7 @@ import LandingPage from "./components/LandingPage"
 import DressPage , { loader } from './layout/DressPage';
 import Layout from './layout';
 import ProductsList from './components/ProductsList';
+import FavoritesList from './components/FavoritesList';
 
 function App() {
 
@@ -40,6 +41,12 @@ function App() {
       element : <div className='w-full h-full flex flex-col'>
         <Layout><ShoppingCart/></Layout>
       </div>
+    },
+    {
+      path : "/favorites",
+      element : <div className='w-full h-full flex flex-col'>
+      <Layout><FavoritesList/></Layout>
+    </div>
     }
   ])
 

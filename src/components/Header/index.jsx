@@ -22,8 +22,8 @@ const Header = () => {
 
           <div className="w-[20%] h-full flex flex-row justify-center items-center gap-[1.5rem] font-[AmazonLight]">
             <div className="flex flex-col justify-center items-center text-[#035972]">
-              <button className="text-[26px]"><><FiHeart /></></button>
-              <p className="text-[16px] mt-2">Favorites</p>
+              <Link to="/favorites"><button className="text-[26px]"><><FiHeart /></></button></Link>
+              <p className="text-[16px]">Favorites</p>
             </div>
             <div className="flex flex-col justify-center items-center text-[#035972] relative">
               <Link to="/shoppingCart"><button className="text-[26px]"><><CgShoppingBag /></></button></Link>              

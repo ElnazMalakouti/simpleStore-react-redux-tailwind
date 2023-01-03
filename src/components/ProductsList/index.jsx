@@ -90,6 +90,7 @@ const ProductsList = () => {
                 dressImage={item.dressImage}
                 dressScore={item.dressScore}
                 dressPrice={item.dressPrice}
+                isFavoritePage={false}                
               />
             })
           }
