@@ -63,14 +63,16 @@ const ProductCard = ({
                         </p>
                     </div>
                     <div className="flex flex-row justify-between items-center mt-[1rem] font-bold">
-                        <p className="text-[19px] "><span className="mr-1">$</span>{dressPrice}</p>
-                        <button className="w-[145px] h-[40px] bg-white text-[#051E42] rounded-[2.5rem] ring-1 ring-white ring-offset-2 ring-offset-[#051E42] hover:bg-[#B4CDD5]">See more info</button>
+                        <p className="text-[21px] "><span className="mr-1">$</span>{dressPrice}</p>
+                        <Link to={`/products/${dressId}`}>
+                            <button className="w-[165px] h-[40px] bg-white text-[#051E42] rounded-[2.5rem] ring-1 ring-white ring-offset-2 ring-offset-[#051E42] hover:bg-[#B4CDD5]">See more info</button>
+                        </Link>
                         {
                             isFavoritePage
                                 ? 
                             <button onClick={() => {                            
                                 dispatch(changeFavoriteMode(dressId))                            
-                            }} className={`w-[80px] h-[32px] p-[3px] text-[14px] rounded-[1rem] bg-[#285E76] ring-1 ring-white ring-offset-1 ring-offset-[#285E76] text-white flex gap-[.20rem] justify-center items-center border`}><><BsTrash /></>remove</button>
+                            }} className={`w-[40px] h-[40px] text-[18px] rounded-[50%] bg-white text-[#051E42] flex justify-center items-center ring-1 ring-white ring-offset-2 ring-offset-[#051E42]`}><><BsTrash /></></button>
                                 :
                                 <button onClick={() => {                            
                                     dispatch(changeFavoriteMode(dressId))                            

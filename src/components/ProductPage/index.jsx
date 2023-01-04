@@ -3,6 +3,7 @@ import "./index.css"
 import { useDispatch } from "react-redux"
 import { addDressOrder } from "../../redux/reducers/orderReducer/orderReducer"
 import { useState } from "react"
+import { toast } from "react-toastify"
 
 
 const ProductPage = ({
@@ -14,14 +15,18 @@ const ProductPage = ({
     dressSizes,
     dressColors,
     dressPrice,
-    dressAttributes}) => {
+    dressAttributes }) => {
 
-        const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
-        const [selectedColor , setSelectedColor] = useState('')
-        const [selectedSize , setSelectedSize] = useState('')
-        const [selectedCount , setSelectedCount] = useState(1)
-        
+    const AddDressNotify = () => toast("added to shopping cart" , {type : 'info'});
+    const uncompleteAdd = () => toast("please complete attributes!!!",{theme : 'colored' , type : 'error'})
+
+    const [selectedColor, setSelectedColor] = useState('')
+    const [selectedSize, setSelectedSize] = useState('')
+    const [selectedCount, setSelectedCount] = useState(1)
+    const [disableButton , setDisableButton] = useState(false)
+
     return (
         <div className="w-full h-full flex flex-row ml-[1rem]">
 
@@ -50,7 +55,7 @@ const ProductPage = ({
                         <div className="flex flex-row gap-4" onChange={(e) => setSelectedColor(e.target.value)}>
                             {
                                 dressColors.map(item => {
-                                    return <input type="radio" value={item.name} checked={selectedColor === item.name} name="dressColor" key={item.id} style={{backgroundColor:`${item.code}`}} className="customRadio w-[32px] h-[32px] ring-1 ring-[#D2D4D3] ring-offset-2 rounded-[50%] cursor-pointer checked:ring-4 checked:ring-[#007ACC]"/>
+                                    return <input type="radio" value={item.name} checked={selectedColor === item.name} name="dressColor" key={item.id} style={{ backgroundColor: `${item.code}` }} className="customRadio w-[32px] h-[32px] ring-1 ring-[#D2D4D3] ring-offset-2 rounded-[50%] cursor-pointer checked:ring-4 checked:ring-[#007ACC]" />
                                 })
                             }
                         </div>
@@ -62,13 +67,13 @@ const ProductPage = ({
                             <option value="" disabled selected hidden>Select</option>
                             {dressSizes.map(item => {
                                 return <option value={item} checked={selectedSize === item} key={item}>{item}</option>
-                            })}                            
+                            })}
                         </select>
                     </div>
 
                     <div className="flex flex-row items-center gap-2 mt-[1rem]">
                         <p className="text-[17px] font-bold text-[#78807C]">Qty:</p>
-                        <select onChange={(e) => setSelectedCount(e.target.value)} className="w-[40px] h-[30px] p-1 text-[16px] text-[#545460] border-[1px] border-solid border-[#8C8D8C] rounded-[.5rem] cursor-pointer outline-none hover:bg-[#EBEBEB]">                            
+                        <select onChange={(e) => setSelectedCount(e.target.value)} className="w-[40px] h-[30px] p-1 text-[16px] text-[#545460] border-[1px] border-solid border-[#8C8D8C] rounded-[.5rem] cursor-pointer outline-none hover:bg-[#EBEBEB]">
                             <option value={1} onClick={selectedCount === 1}>1</option>
                             <option value={2} onClick={selectedCount === 2}>2</option>
                             <option value={3} onClick={selectedCount === 3}>3</option>
@@ -77,18 +82,32 @@ const ProductPage = ({
                     </div>
 
                     <p className="text-[17px] font-bold text-[#78807C] mt-[1rem]">Attributes:</p>
-                    <ul style={{listStyleType : "disc"}} className="text-[17px] text-[#545460] ml-[1.5rem]">
+                    <ul style={{ listStyleType: "disc" }} className="text-[17px] text-[#545460] ml-[1.5rem]">
                         {dressAttributes.map(item => {
                             return <li>{item}</li>
                         })}
                     </ul>
 
-                    <button className="w-[200px] h-[38px] mt-[1rem] text-[20px] text-white font-[AmazonLight] bg-[#285E76] rounded-[1rem]" onClick={()=> dispatch(addDressOrder({
-                        dressId : dressId ,
-                        color : selectedColor ,
-                        size : selectedSize ,
-                        count : selectedCount ,
-                    }))}>Add to cart</button>
+                    <button disabled={disableButton} className="w-[200px] h-[38px] mt-[1rem] text-[20px] text-white font-[AmazonLight] bg-[#285E76] rounded-[1rem] disabled:bg-[#EDEDED] disabled:text-[#545460]" onClick={() => {
+                        {
+                            selectedColor && selectedSize
+                            ?
+                            (
+                                function foo () {
+                                    dispatch(addDressOrder({
+                                        dressId: dressId,
+                                        color: selectedColor,
+                                        size: selectedSize,
+                                        count: selectedCount,
+                                    }))
+                                    AddDressNotify()
+                                    setDisableButton(true)
+                                }()
+                            )
+                            :
+                            uncompleteAdd()
+                        }
+                    }}>{disableButton ? "in shopping cart" : "Add to cart"}</button>
 
                 </div>
             </div>

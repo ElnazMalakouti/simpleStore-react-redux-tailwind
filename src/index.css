@@ -8,6 +8,13 @@ html , body , #root{
   overflow: hidden;
 }
 
+#root {
+  --toastify-color-info: #285E76 !important;
+  --toastify-text-color-info: #fff !important ; 
+  --toastify-color-error: #e74c3c !important;
+  --toastify-text-color-error: #fff !important;
+}
+
 *{
   margin: 0;
   padding: 0;
