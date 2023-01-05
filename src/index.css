@@ -8,9 +8,7 @@ html , body , #root{
   overflow: hidden;
 }
 
-#root {
-  --toastify-color-info: #285E76 !important;
-  --toastify-text-color-info: #fff !important ; 
+#root { 
   --toastify-color-error: #e74c3c !important;
   --toastify-text-color-error: #fff !important;
 }

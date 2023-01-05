@@ -19,8 +19,9 @@ const ProductPage = ({
 
     const dispatch = useDispatch()
 
-    const AddDressNotify = () => toast("added to shopping cart" , {type : 'info'});
-    const uncompleteAdd = () => toast("please complete attributes!!!",{theme : 'colored' , type : 'error'})
+    const AddDressNotify = () => toast("added to shopping cart" , {theme : 'colored' , type : 'success'});
+    const unspecifiedColor = () => toast("please select a color!!!",{theme : 'colored' , type : 'error'})
+    const unspecifiedSize = () => toast("please select a size!!!",{theme : 'colored' , type : 'error'})
 
     const [selectedColor, setSelectedColor] = useState('')
     const [selectedSize, setSelectedSize] = useState('')
@@ -105,7 +106,16 @@ const ProductPage = ({
                                 }()
                             )
                             :
-                            uncompleteAdd()
+                            (
+                                function bar () {
+                                    if(!selectedColor){
+                                        unspecifiedColor()
+                                    }
+                                    if(!selectedSize){
+                                        unspecifiedSize()
+                                    }
+                                }()
+                            )
                         }
                     }}>{disableButton ? "in shopping cart" : "Add to cart"}</button>
 
